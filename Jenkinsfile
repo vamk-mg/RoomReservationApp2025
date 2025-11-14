@@ -20,9 +20,8 @@ pipeline {
         }
     }
     post {
-        always {
-            // Archive JUnit results
-            junit 'target/surefire-reports/*.xml'
-        }
+    always {
+        junit 'target/surefire-reports/*.xml'
+    }
     }
 }
