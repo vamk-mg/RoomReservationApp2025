@@ -18,6 +18,15 @@ pipeline {
                 sh 'mvn -B test'
             }
         }
+
+         stages {
+        stage('List Workspace Files') {
+            steps {
+                sh 'ls -R .'
+            }
+        }
+    }
+        
     }
     post {
     always {
