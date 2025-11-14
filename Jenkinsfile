@@ -63,17 +63,14 @@ pipeline {
     }
 
     post {
-        success {
-            echo "Pipeline succeeded! 🎉"
-        }
-        failure {
-            echo "Pipeline failed! ❌"
-        }
-        always {
-            // Make sure we are on a node before cleaning workspace
-            node {
-                cleanWs()
-            }
-        }
+    success {
+        echo "Pipeline succeeded! 🎉"
+     }
+      failure {
+        echo "Pipeline failed! ❌"
+     }
+      always {
+        cleanWs()
     }
+   }
 }
